@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>REALESTATE CLAWING</title>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nvkyuvfazd&submodules=geocoder"></script>
-</head>
-
-<body>
-    <div class="search" style="">
-            <input id="address" type="text" placeholder="검색할 주소" value="" onkeyup="if(window.event.keyCode == 13){initGeocoder();}>
-            <input id="submit" type="button" value="주소 검색">
-    </div>
-    <div id="map" style="width:400%;height:400px;"></div>
-
-</body>
-
 <script>
 
     var map = new naver.maps.Map("map", {
@@ -120,7 +102,21 @@
 
 </script>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>REALESTATE CLAWING</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nvkyuvfazd&submodules=geocoder"></script>
+</head>
+
+<body>
+    <div class="search" style="">
+            <input id="address" type="text" placeholder="검색할 주소" value="" onkeyup="if(window.event.keyCode == 13){initGeocoder();}">
+            <input id="submit" type="button" value="주소 검색" onClick="initGeocoder()">
+    </div>
+    <div id="map" style="width:400%;height:400px;"></div>
+
+</body>
+
 </html>
-
-
-
