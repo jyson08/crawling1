@@ -94,7 +94,7 @@
             searchCoordinateToAddress(e.coord);
         });
 
-        $('#address').on('keydown', function(e) {
+        map.addListener('#address').on('keydown', function(e) {
             var keyCode = e.which;
 
             if (keyCode === 13) { // Enter Key
@@ -102,7 +102,7 @@
             }
         });
 
-        $('#submit').on('click', function(e) {
+        map.addListener('#submit').on('click', function(e) {
             e.preventDefault();
 
             searchAddressToCoordinate($('#address').val());
